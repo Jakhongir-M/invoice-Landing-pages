@@ -3,18 +3,12 @@
     <div class="container">
       <div class="hero__box">
         <div class="hero__left">
-          <h1 class="hero__title">
-            Инвойс — в международной коммерческой практике документ
+          <h1 class="hero__left-title">
+            E-invoce-Интерактивная платформа для обеспечения электронного
+            документооборота и обработки данных
           </h1>
           <div class="hero__left-box">
-            <a class="hero__info" href="">Узнать подробнее</a>
-            <a class="hero__video" href=""
-              ><img
-                class="hero__video-img"
-                src="@/./assets/img/hero-Landing/Play.svg"
-                alt=""
-            /></a>
-            <a class="hero__start" href="">Начать работу</a>
+            <app-button v-text="HeroNameButton"></app-button>
           </div>
         </div>
         <div class="hero__right">
@@ -26,7 +20,17 @@
 </template>
 
 <script>
-export default {};
+import AppButton from "@/./components/invoiceLandingPage/UiElements/SecondButton.vue";
+export default {
+  data() {
+    return {
+      HeroNameButton: "Узнать подробнее",
+    };
+  },
+  components: {
+    AppButton,
+  },
+};
 </script>
 
 <style scoped lang="scss">
@@ -43,45 +47,35 @@ export default {};
     justify-content: space-between;
   }
   .hero__left {
-    max-width: 710px;
+    max-width: 960px;
   }
-  .hero__right {
-  }
-  .hero__left-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .hero__info {
-    color: #fff;
-    padding: 18px 38px;
-    background-color: $colorMain;
-    font-size: 22px;
-    line-height: 27px;
-    border-radius: 50px;
-  }
-  .hero__video {
-    width: 75px;
-    height: 75px;
-  }
-  .hero__video-img {
-    width: 75px;
-    height: 75px;
-  }
-  .hero__start {
-    color: #fff;
-    padding: 18px 38px;
-    background-color: $colorMain;
-    border-radius: 50px;
-    font-size: 22px;
-    line-height: 27px;
-  }
-  .hero__title {
-    font-size: 64px;
-    line-height: 78px;
+  .hero__left-title {
+    font-size: 63px;
+    line-height: 65px;
     color: #000000;
     opacity: 0.87;
+    margin-top: 20px;
+    margin: 0px;
+    margin-bottom: 50px;
   }
+
+  .hero__left-video {
+    width: 75px;
+    height: 75px;
+  }
+  .hero__left-img {
+    color: $colorMain;
+  }
+
+  .hero__left-link {
+    color: #fff;
+    padding: 18px 38px;
+    background-color: $colorMain;
+    border-radius: 50px;
+    font-size: 22px;
+    line-height: 27px;
+  }
+
   .hero__right {
     width: 600px;
     height: 550px;
