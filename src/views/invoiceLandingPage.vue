@@ -4,6 +4,7 @@
   <app-advantages> </app-advantages>
   <app-service> </app-service>
   <app-tariff> </app-tariff>
+  <app-klients> </app-klients>
   <app-test> </app-test>
 </template>
 
@@ -14,6 +15,7 @@ import AppAdvantages from "../components/invoiceLandingPage/AppAdvantages.vue";
 import AppService from "../components/invoiceLandingPage/AppService.vue";
 import AppTest from "../components/invoiceLandingPage/testbtn.vue";
 import AppTariff from "../components/invoiceLandingPage/AppTariff.vue";
+import AppKlients from "../components/invoiceLandingPage/AppKlients.vue";
 export default {
   components: {
     AppHeader,
@@ -22,6 +24,7 @@ export default {
     AppService,
     AppTest,
     AppTariff,
+    AppKlients,
   },
 };
 </script>

@@ -87,6 +87,7 @@ export default {
 .tariff {
   margin-top: 150px;
   width: 100%;
+  margin-bottom: 200px;
 }
 .tariff input {
   display: none;
@@ -97,7 +98,7 @@ export default {
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 700px;
+  min-height: 610px;
   perspective: 1000px;
   overflow: hidden;
 }
