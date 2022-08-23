@@ -8,7 +8,7 @@
             документооборота и обработки данных
           </h1>
           <div class="hero__left-box">
-            <app-button v-text="HeroNameButton"></app-button>
+            <app-button>Узнать подробнее</app-button>
           </div>
         </div>
         <div class="hero__right">

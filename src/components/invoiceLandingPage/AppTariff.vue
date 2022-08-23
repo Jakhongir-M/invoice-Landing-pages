@@ -16,8 +16,7 @@
             Тариф для пользователей отправляющих до 500 (пятисот) документов в
             месяц
           </p>
-          <second-button class="tariff__btn" v-text="ButtonName">
-          </second-button>
+          <second-button class="tariff__btn">Оформить</second-button>
         </label>
         <label class="tariff__item" for="t-2">
           <h3 class="tariff__testimonials-title">Старт</h3>
@@ -26,8 +25,7 @@
             Тариф для пользователей отправляющих до 500 (пятисот) документов в
             месяц
           </p>
-          <second-button class="tariff__btn" v-text="ButtonName">
-          </second-button>
+          <second-button class="tariff__btn">Оформить</second-button>
         </label>
         <label class="tariff__item" for="t-3">
           <h3 class="tariff__testimonials-title">Бизнес 1000</h3>
@@ -36,8 +34,7 @@
             Тариф для пользователей отправляющих до 500 (пятисот) документов в
             месяц
           </p>
-          <second-button class="tariff__btn" v-text="ButtonName">
-          </second-button>
+          <second-button class="tariff__btn">Оформить</second-button>
         </label>
       </div>
       <div class="dots">
@@ -54,7 +51,7 @@ import SecondButton from "@/./components/invoiceLandingPage/UiElements/OneButton
 export default {
   data() {
     return {
-      ButtonName: "Оформить",
+      // ButtonName: "Оформить",
     };
   },
   components: {

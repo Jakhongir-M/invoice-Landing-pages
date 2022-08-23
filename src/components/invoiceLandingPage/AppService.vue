@@ -16,13 +16,12 @@
               ontouchstart="this.classList.toggle('hover');"
             >
               <div class="container">
-                <div
-                  class="front"
-                  style="background-image: url(https://unsplash.it/500/500/)"
-                >
+                <div class="front service__front-1">
                   <div class="inner">
-                    <p>1</p>
-                    <span>Создайте необходимый документ</span>
+                    <p class="service__number">1</p>
+                    <span class="service__text"
+                      >Создайте необходимый документ</span
+                    >
                   </div>
                 </div>
                 <div class="back">
@@ -37,13 +36,28 @@
               ontouchstart="this.classList.toggle('hover');"
             >
               <div class="container">
-                <div
-                  class="front"
-                  style="background-image: url(https://unsplash.it/500/500/)"
-                >
+                <div class="front service__front-2">
                   <div class="inner">
-                    <p>3</p>
-                    <span>Заполните документ</span>
+                    <p class="service__number">2</p>
+                    <span class="service__text">Выберите тип документа</span>
+                  </div>
+                </div>
+                <div class="back">
+                  <div class="inner">
+                    <p>Выберите необходимый тип документа в разделе выбора</p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li
+              class="service__item"
+              ontouchstart="this.classList.toggle('hover');"
+            >
+              <div class="container">
+                <div class="front service__front-3">
+                  <div class="inner">
+                    <p class="service__number">3</p>
+                    <span class="service__text">Заполните документ</span>
                   </div>
                 </div>
                 <div class="back">
@@ -58,18 +72,18 @@
               ontouchstart="this.classList.toggle('hover');"
             >
               <div class="container">
-                <div
-                  class="front"
-                  style="background-image: url(https://unsplash.it/500/500/)"
-                >
+                <div class="front service-front-4">
                   <div class="inner">
-                    <p>4</p>
-                    <span>Ваш документ готов</span>
+                    <p class="service__number">5</p>
+                    <span class="service__text">Ваш документ готов</span>
                   </div>
                 </div>
                 <div class="back">
                   <div class="inner">
-                    <p>Войдите на сайт и создайте необходимый документ</p>
+                    <p>
+                      Ваш документ должны обработать, после чего можете забрать
+                      готовый документ
+                    </p>
                   </div>
                 </div>
               </div>
@@ -79,34 +93,10 @@
               ontouchstart="this.classList.toggle('hover');"
             >
               <div class="container">
-                <div
-                  class="front"
-                  style="background-image: url(https://unsplash.it/500/500/)"
-                >
+                <div class="front service-front-5">
                   <div class="inner">
-                    <p>5</p>
-                    <span>Сохраните ваш документ</span>
-                  </div>
-                </div>
-                <div class="back">
-                  <div class="inner">
-                    <p>Сохраните заполненный вами документ</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li
-              class="service__item"
-              ontouchstart="this.classList.toggle('hover');"
-            >
-              <div class="container">
-                <div
-                  class="front"
-                  style="background-image: url(https://unsplash.it/500/500/)"
-                >
-                  <div class="inner">
-                    <p>5</p>
-                    <span>Сохраните ваш документ</span>
+                    <p class="service__number">4</p>
+                    <span class="service__text">Сохраните ваш документ</span>
                   </div>
                 </div>
                 <div class="back">
@@ -129,6 +119,26 @@ export default {};
 
 <style lang="scss" scoped>
 @import "@/./style/veraibles.scss";
+.service__front-1 {
+  background-image: url("@/./assets/img/service-Landing/document-1.jpg");
+}
+.service__front-2 {
+  background-image: url("@/./assets/img/service-Landing/document-2.jpg");
+}
+.service__front-3 {
+  background-image: url("@/./assets/img/service-Landing/document-3.jpg");
+}
+.service-front-4 {
+  background-image: url("@/./assets/img/service-Landing/document-4.jpg");
+}
+.service-front-5 {
+  background-image: url("@/./assets/img/service-Landing/document-5.jpg");
+}
+.service__number {
+  font-size: 100px;
+  line-height: 78px;
+  opacity: 0.87;
+}
 .service {
   padding-top: 200px;
 }
@@ -171,6 +181,12 @@ export default {};
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   align-items: center;
+  background-image: url("@/./assets/img/service-Landing/arrow-1.svg "),
+    url("@/./assets/img/service-Landing/arrow-2.svg "),
+    url("@/./assets/img/service-Landing/arrow-3.svg "),
+    url("@/./assets/img/service-Landing/arrow-4.svg ");
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: 800px 50px, 250px 470px, 1325px 300px, 570px 700px;
 }
 
 .service__item {
@@ -179,6 +195,7 @@ export default {};
   margin: 1rem;
   cursor: pointer;
 }
+
 .service__item:nth-child(1) {
   margin-top: 150px;
 }
@@ -235,7 +252,7 @@ export default {};
   content: "";
   display: block;
   opacity: 0.6;
-  background-color: #000;
+  background-color: black;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 10px;
@@ -301,13 +318,13 @@ export default {};
   transform-style: preserve-3d;
 }
 
-.front .inner p {
-  font-size: 2rem;
+.front .inner .service__number {
+  font-size: 4rem;
   margin-bottom: 2rem;
   position: relative;
 }
 
-.front .inner p:after {
+.front .inner .service__number:after {
   content: "";
   width: 4rem;
   height: 2px;
@@ -320,10 +337,9 @@ export default {};
   bottom: -0.75rem;
 }
 
-.front .inner span {
-  color: rgba(255, 255, 255, 0.7);
-  font-family: "Montserrat";
-  font-weight: 300;
+.front .inner .service__text {
+  color: #fff;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 64rem) {

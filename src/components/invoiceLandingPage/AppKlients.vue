@@ -14,7 +14,7 @@
             />
           </div>
 
-          <div class="slide">
+          <div class="klients__slide">
             <img
               src="@/./assets/img/klients/icon-2.png"
               height="100"
@@ -22,7 +22,7 @@
               alt=""
             />
           </div>
-          <div class="slide">
+          <div class="klients__slide">
             <img
               src="@/./assets/img/klients/icon-3.png"
               height="100"
@@ -30,7 +30,7 @@
               alt=""
             />
           </div>
-          <div class="slide">
+          <div class="klients__slide">
             <img
               src="@/./assets/img/klients/icon-4.png"
               height="100"
@@ -38,7 +38,7 @@
               alt=""
             />
           </div>
-          <div class="slide">
+          <div class="klients__slide">
             <img
               src="@/./assets/img/klients/icon-1.png"
               height="100"
@@ -46,7 +46,7 @@
               alt=""
             />
           </div>
-          <div class="slide">
+          <div class="klients__slide">
             <img
               src="@/./assets/img/klients/icon-2.png"
               height="100"
@@ -98,7 +98,7 @@ $animationSpeed: 40s;
 }
 
 // Styling
-.slide {
+.klients__slide {
   margin-right: 200px;
 }
 .klients__box {

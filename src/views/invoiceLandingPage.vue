@@ -1,10 +1,10 @@
 <template>
   <app-header> </app-header>
-  <app-hero> </app-hero>
+  <!-- <app-hero> </app-hero>
   <app-advantages> </app-advantages>
   <app-service> </app-service>
   <app-tariff> </app-tariff>
-  <app-klients> </app-klients>
+  <app-klients> </app-klients> -->
   <app-test> </app-test>
 </template>
 

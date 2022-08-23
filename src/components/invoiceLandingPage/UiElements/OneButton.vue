@@ -1,5 +1,5 @@
 <template>
-  <a href="" class="btn btn2"></a>
+  <a href="" class="btn btn2"><slot /></a>
 </template>
 
 <script>

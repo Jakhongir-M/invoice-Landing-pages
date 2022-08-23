@@ -1,27 +1,26 @@
 <template>
-  <!-- Hamburger -->
-  <nav role="navigation">
-    <div id="menuToggle">
-      <input type="checkbox" />
-
-      <span></span>
-      <span></span>
-      <span></span>
-
-      <ul id="menu">
-        <a href="#"><li>Home</li></a>
-        <a href="#"><li>About</li></a>
-        <a href="#"><li>Info</li></a>
-        <a href="#"><li>Contact</li></a>
-        <a href="https://erikterwan.com/" target="_blank"
-          ><li>Show me more</li></a
-        >
-      </ul>
-    </div>
-  </nav>
-  <!-- hamburger FINISHED -->
   <header class="header">
     <div class="container">
+      <!-- Hamburger -->
+      <nav role="navigation">
+        <div id="hamburger__menuToggle">
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+            <a href="#"><li>Главная</li></a>
+            <a href="#"><li>Информация</li></a>
+            <a href="#"><li>Контакты</li></a>
+            <a href="#"><li>Тарифы</li></a>
+            <a href="#"><li>Клиенты</li></a>
+          </ul>
+        </div>
+      </nav>
+      <!-- hamburger FINISHED -->
+
       <div class="header__box">
         <a class="header__logo" href=""
           ><img src="@/./assets/img/header-Landing/Logo.svg" alt=""
@@ -44,7 +43,7 @@
               <a class="header__nav-link" href="#">Клиенты</a>
             </li>
             <li>
-              <app-button v-text="buttontext"></app-button>
+              <app-button>Авторизоваться</app-button>
             </li>
           </ul>
         </nav>
@@ -71,29 +70,94 @@ export default {
 
 <style scoped lang="scss">
 @import "@/./style/veraibles.scss";
-// BTN__________________________________________
-#menuToggle {
+// // HAMBURGET START__________________________________________
+#hamburger__menuToggle {
   display: none;
   position: relative;
   top: 50px;
-  left: 50px;
+  left: 0px;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
   text-align: left;
 }
+.gradient-border {
+  @import url("https://fonts.googleapis.com/css?family=Raleway:200");
 
-#menuToggle a {
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #1d1f20;
+  }
+  #box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 200px;
+    color: white;
+    font-family: "Raleway";
+    font-size: 2.5rem;
+  }
+  .gradient-border {
+    --borderWidth: 3px;
+    background: #1d1f20;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  .gradient-border:after {
+    content: "";
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    );
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+#hamburger__menuToggle a {
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover {
-  color: tomato;
+#hamburger__menuToggle a:hover {
+  color: $colorMain;
 }
 
-#menuToggle input {
+#hamburger__menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
@@ -112,7 +176,7 @@ export default {
 /*
  * Just a quick hamburger
  */
-#menuToggle span {
+#hamburger__menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
@@ -130,61 +194,53 @@ export default {
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child {
+#hamburger__menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2) {
+#hamburger__menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span {
+#hamburger__menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3) {
+#hamburger__menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2) {
+#hamburger__menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
 #menu {
   position: absolute;
-  width: 50%;
-  margin: -100px 0 0 -50px;
+  width: 70%;
+  margin: -125px 0 0 -50px;
   padding: 50px;
-  padding-top: 125px;
-
+  padding-top: 150px;
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  border-radius: 50px;
 }
 #menu li {
   padding: 10px 0;
   font-size: 22px;
 }
 
-#menuToggle input:checked ~ ul {
+#hamburger__menuToggle input:checked ~ ul {
   transform: none;
 }
 
-@media screen and (max-width: 1098px) {
-  #menuToggle,
-  span {
-    display: block;
-  }
-  .header__box {
-    justify-content: flex-end;
-  }
-}
+// HAMBURGER___________________________________FINISHED
 // BTN FINISHED___________________________________
 .header {
   background-color: $colorMain;
@@ -193,12 +249,11 @@ export default {
   }
   .header__box {
     padding: 40px 0px;
-  }
-  .header__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .header__logo {
     width: 120px;
     height: 75px;
@@ -253,7 +308,7 @@ export default {
 
   // BTN FINISH
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1350px) {
     .header__nav-link {
       font-size: 15px;
       line-height: 20px;
@@ -268,8 +323,18 @@ export default {
     .header__nav {
       display: none;
     }
+    #hamburger__menuToggle {
+      display: block;
+    }
     .header__nav-mobile {
       display: block;
+    }
+    .header__box {
+      justify-content: end;
+    }
+    .header__box {
+      padding-bottom: 30px;
+      padding-top: 0px;
     }
   }
 }
