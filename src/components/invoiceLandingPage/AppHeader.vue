@@ -81,72 +81,6 @@ export default {
   user-select: none;
   text-align: left;
 }
-.gradient-border {
-  @import url("https://fonts.googleapis.com/css?family=Raleway:200");
-
-  html,
-  body {
-    height: 100%;
-  }
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background: #1d1f20;
-  }
-  #box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 400px;
-    height: 200px;
-    color: white;
-    font-family: "Raleway";
-    font-size: 2.5rem;
-  }
-  .gradient-border {
-    --borderWidth: 3px;
-    background: #1d1f20;
-    position: relative;
-    border-radius: var(--borderWidth);
-  }
-  .gradient-border:after {
-    content: "";
-    position: absolute;
-    top: calc(-1 * var(--borderWidth));
-    left: calc(-1 * var(--borderWidth));
-    height: calc(100% + var(--borderWidth) * 2);
-    width: calc(100% + var(--borderWidth) * 2);
-    background: linear-gradient(
-      60deg,
-      #f79533,
-      #f37055,
-      #ef4e7b,
-      #a166ab,
-      #5073b8,
-      #1098ad,
-      #07b39b,
-      #6fba82
-    );
-    border-radius: calc(2 * var(--borderWidth));
-    z-index: -1;
-    animation: animatedgradient 3s ease alternate infinite;
-    background-size: 300% 300%;
-  }
-
-  @keyframes animatedgradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-}
 #hamburger__menuToggle a {
   text-decoration: none;
   color: #232323;
@@ -294,7 +228,6 @@ export default {
     background-color: #fff;
     transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
   }
-
   @media (hover: hover) and (pointer: fine) {
     .header__nav-link:hover::before {
       left: 0;
@@ -308,6 +241,7 @@ export default {
 
   // BTN FINISH
 
+  // _________________________________Responsive______________________________________
   @media screen and (max-width: 1350px) {
     .header__nav-link {
       font-size: 15px;
@@ -335,6 +269,12 @@ export default {
     .header__box {
       padding-bottom: 30px;
       padding-top: 0px;
+    }
+  }
+
+  @media screen and (max-width: 380px) {
+    #menu {
+      width: 90%;
     }
   }
 }
