@@ -8,7 +8,7 @@
             документооборота и обработки данных
           </h1>
           <div class="hero__left-box">
-            <app-button>Узнать подробнее</app-button>
+            <app-button class="hero__btn">Узнать подробнее</app-button>
           </div>
         </div>
         <div class="hero__right">
@@ -80,6 +80,155 @@ export default {
     width: 600px;
     height: 550px;
     border-radius: 55px;
+  }
+  @media screen and (max-width: 1600px) {
+    .hero {
+      padding-top: 100px;
+    }
+    .hero__left-title {
+      font-size: 50px;
+    }
+    .hero__left {
+      max-width: 800px;
+    }
+    .hero__right {
+      width: 500px;
+    }
+    .hero__box {
+    }
+  }
+  @media screen and (max-width: 1400px) {
+    .hero__left-title {
+      font-size: 45px;
+      line-height: 50px;
+    }
+    .hero__left {
+      max-width: 650px;
+    }
+    .hero__right {
+      width: 400px;
+      height: 400px;
+    }
+    .hero__box {
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .hero__left-title {
+      font-size: 35px;
+      line-height: 45px;
+    }
+    .hero__left {
+      max-width: 500px;
+    }
+    .hero__right {
+      width: 350px;
+      height: 350px;
+    }
+  }
+  @media screen and (max-width: 970px) {
+    .hero__left-title {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 10px;
+    }
+    .hero__left {
+      max-width: 400px;
+    }
+    .hero__right {
+      width: 300px;
+      height: 300px;
+    }
+    .hero__btn {
+      font-size: 15px;
+      padding: 10px 10px;
+    }
+  }
+  @media screen and (max-width: 820px) {
+    .hero__left-title {
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+    .hero__left {
+      max-width: 300px;
+    }
+    .hero__right {
+      width: 250px;
+      height: 250px;
+    }
+    .hero__btn {
+      font-size: 13px;
+      padding: 10px 10px;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .hero__left-title {
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 30px;
+    }
+    .hero__left {
+      max-width: 450px;
+      text-align: center;
+    }
+    .hero__right {
+      width: 350px;
+      height: 350px;
+    }
+    .hero__btn {
+      font-size: 13px;
+      padding: 10px 10px;
+    }
+    .hero__box {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 570px) {
+    .hero__left-title {
+      font-size: 25px;
+      line-height: 35px;
+      margin-bottom: 20px;
+    }
+    .hero__left {
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .hero__btn {
+      font-size: 13px;
+      padding: 10px 10px;
+      margin-bottom: 20px;
+    }
+    .hero__box {
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      padding: 0px 20px;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .hero__left-title {
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+    .hero__left {
+      max-width: 310px;
+      text-align: center;
+    }
+    .hero__right {
+      width: 300px;
+      height: 300px;
+    }
+    .hero__btn {
+      margin-bottom: 20px;
+    }
+    .hero {
+      padding-top: 50px;
+    }
   }
 }
 </style>
