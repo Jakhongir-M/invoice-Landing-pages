@@ -165,6 +165,9 @@ export default {
   z-index: 4;
   background-color: $colorMain;
   color: #fff;
+  .tariff__desc {
+    color: white;
+  }
 }
 #t-1:checked ~ .tariff__testimonials label[for="t-2"] {
   transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
@@ -193,7 +196,7 @@ export default {
   transform: scale(1.5);
 }
 #t-2:checked ~ .tariff__testimonials label[for="t-1"] {
-  transform: translateX(-300px) translateZ(-90px) rotateY(15deg);
+  transform: translateX(-400px) translateZ(-90px) rotateY(15deg);
   .tariff__btn {
     display: none;
   }
@@ -202,6 +205,9 @@ export default {
   z-index: 3;
   color: #fff;
   background-color: $colorMain;
+  .tariff__desc {
+    color: white;
+  }
 }
 #t-2:checked ~ .tariff__testimonials label[for="t-3"] {
   transform: translateX(300px) translateZ(-90px) rotateY(-15deg);
@@ -239,7 +245,131 @@ export default {
   background-color: $colorMain;
   color: #fff;
   z-index: 3;
+  .tariff__desc {
+    color: white;
+  }
 }
 @media screen and (max-width: 1098px) {
+  .tariff__testimonials .tariff__item {
+    width: 400px;
+    height: 600px;
+    border-radius: 25px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .tariff__item {
+    position: relative;
+  }
+  .tariff__title {
+    font-size: 45px;
+    line-height: 60px;
+  }
+  .tariff__testimonials-title {
+    margin-top: 100px;
+    margin-bottom: 43px;
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .tariff__desc {
+    margin-bottom: 100px;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+  }
+  #t-1:checked ~ .tariff__testimonials label[for="t-1"] {
+    z-index: 4;
+    background-color: $colorMain;
+    color: #fff;
+  }
+  #t-1:checked ~ .tariff__testimonials label[for="t-2"] {
+    transform: translateX(50px) translateZ(-50px) rotateY(-15deg);
+    z-index: 3;
+    .tariff__btn {
+      display: none;
+    }
+  }
+  #t-1:checked ~ .tariff__testimonials label[for="t-3"] {
+    transform: translateX(100px) translateZ(-180px) rotateY(-25deg);
+    z-index: 2;
+    .tariff__btn {
+      display: none;
+    }
+  }
+
+  /* Second */
+
+  #t-2:checked ~ .tariff__testimonials label[for="t-1"] {
+    transform: translateX(-100px) translateZ(-90px) rotateY(15deg);
+    .tariff__btn {
+      display: none;
+    }
+  }
+  #t-2:checked ~ .tariff__testimonials label[for="t-2"] {
+    z-index: 3;
+    background-color: $colorMain;
+    color: #fff;
+  }
+  #t-2:checked ~ .tariff__testimonials label[for="t-3"] {
+    transform: translateX(100px) translateZ(-90px) rotateY(-15deg);
+    z-index: 2;
+    .tariff__btn {
+      display: none;
+    }
+  }
+
+  /* Third */
+
+  #t-3:checked ~ .tariff__testimonials label[for="t-1"] {
+    transform: translateX(100px) translateZ(-180px) rotateY(25deg);
+    .tariff__btn {
+      display: none;
+    }
+  }
+  #t-3:checked ~ .tariff__testimonials label[for="t-2"] {
+    transform: translateX(-100px) translateZ(-90px) rotateY(15deg);
+    .tariff__btn {
+      display: none;
+    }
+  }
+  #t-3:checked ~ .tariff__testimonials label[for="t-3"] {
+    background-color: $colorMain;
+    color: #fff;
+    z-index: 3;
+  }
+  @media screen and (max-width: 500px) {
+    .tariff__testimonials-title {
+      margin-top: 20px;
+      font-size: 35px;
+      line-height: 0px;
+    }
+    .tariff__desc {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+    .tariff__testimonials .tariff__item {
+      width: 350px;
+      height: 400px;
+    }
+    .tariff__btn {
+      margin-bottom: 10px;
+    }
+    .container {
+      padding: 0px 10px;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    .tariff__testimonials-title {
+      font-size: 30px;
+    }
+    .tariff__desc {
+      font-size: 20px;
+    }
+    .tariff__testimonials .tariff__item {
+      width: 280px;
+    }
+    .tariff__btn {
+      padding: 10px 5px;
+    }
+  }
 }
 </style>
