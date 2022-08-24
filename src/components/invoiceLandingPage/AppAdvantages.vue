@@ -17,8 +17,10 @@
                 src="@/./assets/img/advantages-Landing/Icon-1.svg"
                 alt=""
               />
-              <h3 class="list__title">Доступность</h3>
-              <p class="list__desc">Сервис доступен для всех, всего и вся</p>
+              <h3 class="list__title">Удобность</h3>
+              <p class="list__desc">
+                Сервис Удобный и Комфортный для пользования
+              </p>
             </li>
             <li class="list__item">
               <img
@@ -27,7 +29,9 @@
                 alt=""
               />
               <h3 class="list__title">Скорость работы</h3>
-              <p class="list__desc">Сервис доступен для всех, всего и вся</p>
+              <p class="list__desc">
+                Ваши документ будут обработаны в кратчайшие сроки
+              </p>
             </li>
             <li class="list__item">
               <img
@@ -36,7 +40,9 @@
                 alt=""
               />
               <h3 class="list__title">Безопасноть</h3>
-              <p class="list__desc">Сервис доступен для всех, всего и вся</p>
+              <p class="list__desc">
+                Ваши данные будут Конфиденциальны и доступны только вам
+              </p>
             </li>
             <li class="list__item">
               <img
@@ -45,7 +51,9 @@
                 alt=""
               />
               <h3 class="list__title">Обратная связь</h3>
-              <p class="list__desc">Сервис доступен для всех, всего и вся</p>
+              <p class="list__desc">
+                Служба поддержки готова ответить в любой момент
+              </p>
             </li>
           </ul>
         </div>
@@ -153,6 +161,164 @@ export default {};
     text-align: center;
     color: #000000;
     opacity: 0.75;
+  }
+}
+
+@media screen and (max-width: 1530px) {
+  .list__item {
+    width: 200px;
+    height: 300px;
+  }
+  .list__title {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .list__desc {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .advantages__box {
+  }
+  .advantages__left {
+    min-width: 300px;
+  }
+  .advantages__link {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .advantages__title {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .advantages__desc {
+  }
+  .list__img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .advantages__box {
+    display: flex;
+    flex-direction: column;
+  }
+  .list__item:nth-child(1) {
+    margin-top: 0px;
+  }
+  .list__item:nth-child(3) {
+    margin-top: 0px;
+  }
+  .advantages__left {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .advantages__title {
+    font-size: 40px;
+    line-height: 70px;
+    margin-bottom: 10px;
+  }
+  .advantages__desc {
+    font-size: 30px;
+  }
+  .advantages__list {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .advantages__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+  .advantages__desc {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .advantages__link {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .list__item {
+    width: 400px;
+    height: 400px;
+  }
+  .list__title {
+    font-size: 30px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .list__img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+  .list__desc {
+    font-size: 20px;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .list__item {
+    width: 250px;
+    height: 350px;
+  }
+  .list__title {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .list__img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  .list__desc {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+@media screen and (max-width: 585px) {
+  .list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .list__item {
+    width: 300px;
+    height: 300px;
+  }
+  .list__title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .advantages__title {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 10px;
+  }
+  .advantages__desc {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .advantages__link {
+    font-size: 25px;
+    line-height: 40px;
   }
 }
 </style>

@@ -118,6 +118,12 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+._container {
+  max-width: 1675px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
 @import "@/./style/veraibles.scss";
 .service__front-1 {
   background-image: url("@/./assets/img/service-Landing/document-1.jpg");
@@ -342,22 +348,77 @@ export default {};
   font-weight: 600;
 }
 
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 1480px) {
   .service__item {
     width: calc(33.333333% - 2rem);
   }
-}
-
-@media screen and (max-width: 48rem) {
-  .service__item {
-    width: calc(50% - 2rem);
+  .service__list {
+    background-image: url("@/./assets/img/service-Landing/arrow-1.svg "),
+      url("@/./assets/img/service-Landing/arrow-2.svg "),
+      url("@/./assets/img/service-Landing/arrow-3.svg "),
+      url("@/./assets/img/service-Landing/arrow-4.svg ");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 550px 50px, 100px 470px, 1000px 200px, 470px 700px;
   }
 }
 
-@media screen and (max-width: 32rem) {
+@media screen and (max-width: 1060px) {
+  .service__title {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .service__item {
+    width: calc(50% - 2rem);
+  }
+  .service__list {
+    background-image: url("");
+  }
+  .service__item {
+    margin-top: 0px;
+  }
+  .service__item:nth-child(1) {
+    margin-top: 100px;
+  }
+  .service__item:nth-child(2) {
+    margin-top: 150px;
+  }
+  .service__item:nth-child(5) {
+    margin-bottom: 150px;
+  }
+  .service__box-desc {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
   .service__item {
     width: 100%;
     margin: 0 0 2rem 0;
+  }
+  .service__item:nth-child(1) {
+    margin-top: 50px;
+  }
+  .service__item:nth-child(2) {
+    margin-top: 0px;
+  }
+  .service__item:nth-child(5) {
+    margin-bottom: 100px;
+  }
+  .service__desc {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .service__title {
+    font-size: 45px;
+    line-height: 40px;
+  }
+  @media screen and (max-width: 380px) {
+    .service__title {
+      font-size: 35px;
+    }
+    .service__desc {
+      font-size: 25px;
+    }
   }
 }
 </style>

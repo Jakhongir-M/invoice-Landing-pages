@@ -99,8 +99,8 @@ export default {
   }
   @media screen and (max-width: 1400px) {
     .hero__left-title {
-      font-size: 45px;
-      line-height: 50px;
+      font-size: 55px;
+      line-height: 60px;
     }
     .hero__left {
       max-width: 650px;
@@ -114,18 +114,18 @@ export default {
   }
   @media screen and (max-width: 1200px) {
     .hero__left-title {
-      font-size: 35px;
-      line-height: 45px;
+      font-size: 40px;
+      line-height: 50px;
     }
     .hero__left {
-      max-width: 500px;
+      max-width: 550px;
     }
     .hero__right {
       width: 350px;
       height: 350px;
     }
   }
-  @media screen and (max-width: 970px) {
+  @media screen and (max-width: 1000px) {
     .hero__left-title {
       font-size: 30px;
       line-height: 40px;
@@ -145,31 +145,31 @@ export default {
   }
   @media screen and (max-width: 820px) {
     .hero__left-title {
-      font-size: 20px;
+      font-size: 25px;
       line-height: 30px;
       margin-bottom: 30px;
     }
     .hero__left {
-      max-width: 300px;
+      max-width: 400px;
     }
     .hero__right {
       width: 250px;
       height: 250px;
     }
     .hero__btn {
-      font-size: 13px;
-      padding: 10px 10px;
+      font-size: 20px;
+      padding: 20px 20px;
       margin-bottom: 20px;
     }
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 750px) {
     .hero__left-title {
-      font-size: 30px;
+      font-size: 35px;
       line-height: 40px;
       margin-bottom: 30px;
     }
     .hero__left {
-      max-width: 450px;
+      max-width: 500px;
       text-align: center;
     }
     .hero__right {
@@ -177,8 +177,9 @@ export default {
       height: 350px;
     }
     .hero__btn {
-      font-size: 13px;
-      padding: 10px 10px;
+      font-size: 20px;
+      padding: 20px 20px;
+      margin-bottom: 20px;
     }
     .hero__box {
       flex-direction: column;
@@ -187,8 +188,8 @@ export default {
   }
   @media screen and (max-width: 570px) {
     .hero__left-title {
-      font-size: 25px;
-      line-height: 35px;
+      font-size: 40px;
+      line-height: 40px;
       margin-bottom: 20px;
     }
     .hero__left {
@@ -197,8 +198,8 @@ export default {
     }
 
     .hero__btn {
-      font-size: 13px;
-      padding: 10px 10px;
+      font-size: 20px;
+      padding: 20px 20px;
       margin-bottom: 20px;
     }
     .hero__box {
@@ -211,12 +212,12 @@ export default {
   }
   @media screen and (max-width: 420px) {
     .hero__left-title {
-      font-size: 22px;
-      line-height: 30px;
+      font-size: 30px;
+      line-height: 40px;
       margin-bottom: 20px;
     }
     .hero__left {
-      max-width: 310px;
+      max-width: 400px;
       text-align: center;
     }
     .hero__right {
