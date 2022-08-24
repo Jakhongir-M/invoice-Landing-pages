@@ -30,6 +30,7 @@
               alt=""
             />
           </div>
+
           <div class="klients__slide">
             <img
               src="@/./assets/img/klients/icon-4.png"
@@ -38,6 +39,7 @@
               alt=""
             />
           </div>
+
           <div class="klients__slide">
             <img
               src="@/./assets/img/klients/icon-1.png"
@@ -51,6 +53,22 @@
               src="@/./assets/img/klients/icon-2.png"
               height="100"
               width="100"
+              alt=""
+            />
+          </div>
+          <div class="klients__slide">
+            <img
+              src="@/./assets/img/klients/icon-3.png"
+              height="100"
+              width="530"
+              alt=""
+            />
+          </div>
+          <div class="klients__slide">
+            <img
+              src="@/./assets/img/klients/icon-4.png"
+              height="100"
+              width="200"
               alt=""
             />
           </div>
@@ -108,7 +126,7 @@ $animationSpeed: 40s;
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 960px;
+  max-width: 1500px;
 
   &::before,
   &::after {
@@ -142,5 +160,18 @@ $animationSpeed: 40s;
     height: 100px;
     width: 250px;
   }
+}
+@media screen and (max-width: 500px) {
+  .klients__desc {
+    font-size: 24px;
+  }
+  .klients__title {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .klients__slide {
+    margin-right: 100px;
+  }
+  $animationSpeed: 10s;
 }
 </style>

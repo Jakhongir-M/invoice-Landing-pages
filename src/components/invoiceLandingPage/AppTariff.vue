@@ -1,7 +1,7 @@
 <template>
-  <div class="tariff">
+  <div id="tariff" class="tariff">
     <div class="container">
-      <a href="#" class="tariff__link"> Тарифные планы</a>
+      <a class="tariff__link"> Тарифные планы</a>
       <h2 class="tariff__title">Какие у нас тарифные планы?</h2>
       <p class="tariff__desc">Цена на отправку одного документа</p>
       <input type="radio" name="testimonial" id="t-1" />

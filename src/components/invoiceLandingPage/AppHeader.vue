@@ -175,7 +175,7 @@ export default {
 }
 
 // HAMBURGER___________________________________FINISHED
-// BTN FINISHED___________________________________
+
 .header {
   background-color: $colorMain;
   .header__nav-mobile {
