@@ -5,7 +5,7 @@
   <app-service> </app-service>
   <app-tariff> </app-tariff>
   <app-klients> </app-klients>
-  <app-test> </app-test>
+  <app-footers> </app-footers>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ import AppHeader from "../components/invoiceLandingPage/AppHeader.vue";
 import AppHero from "../components/invoiceLandingPage/AppHero.vue";
 import AppAdvantages from "../components/invoiceLandingPage/AppAdvantages.vue";
 import AppService from "../components/invoiceLandingPage/AppService.vue";
-import AppTest from "../components/invoiceLandingPage/testbtn.vue";
+import AppFooters from "../components/invoiceLandingPage/AppFooters.vue";
 import AppTariff from "../components/invoiceLandingPage/AppTariff.vue";
 import AppKlients from "../components/invoiceLandingPage/AppKlients.vue";
 export default {
@@ -22,9 +22,9 @@ export default {
     AppHero,
     AppAdvantages,
     AppService,
-    AppTest,
     AppTariff,
     AppKlients,
+    AppFooters,
   },
 };
 </script>
