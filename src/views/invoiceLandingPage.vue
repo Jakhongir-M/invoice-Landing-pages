@@ -4,7 +4,7 @@
   <app-advantages> </app-advantages>
   <app-service> </app-service>
   <app-tariff> </app-tariff>
-  <app-klients> </app-klients>
+  <app-clients> </app-clients>
   <app-footers> </app-footers>
 </template>
 
@@ -15,7 +15,7 @@ import AppAdvantages from "../components/invoiceLandingPage/AppAdvantages.vue";
 import AppService from "../components/invoiceLandingPage/AppService.vue";
 import AppFooters from "../components/invoiceLandingPage/AppFooters.vue";
 import AppTariff from "../components/invoiceLandingPage/AppTariff.vue";
-import AppKlients from "../components/invoiceLandingPage/AppKlients.vue";
+import AppClients from "../components/invoiceLandingPage/AppClients.vue";
 export default {
   components: {
     AppHeader,
@@ -23,7 +23,7 @@ export default {
     AppAdvantages,
     AppService,
     AppTariff,
-    AppKlients,
+    AppClients,
     AppFooters,
   },
 };

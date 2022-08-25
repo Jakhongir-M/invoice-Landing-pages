@@ -1,10 +1,10 @@
 <template>
-  <div class="klients">
+  <div class="Clients" id="clients">
     <div class="container">
-      <p class="klients__desc">Клиенты</p>
-      <h3 class="klients__title">Наши Основные клиенты</h3>
-      <div class="klients__box">
-        <div class="klients__track">
+      <p class="clients__desc">Клиенты</p>
+      <h3 class="clients__title">Наши Основные клиенты</h3>
+      <div class="clients__box">
+        <div class="clients__track">
           <div class="slide">
             <img
               src="@/./assets/img/klients/icon-1.png"
@@ -14,7 +14,7 @@
             />
           </div>
 
-          <div class="klients__slide">
+          <div class="clients__slide">
             <img
               src="@/./assets/img/klients/icon-2.png"
               height="100"
@@ -22,7 +22,7 @@
               alt=""
             />
           </div>
-          <div class="klients__slide">
+          <div class="clients__slide">
             <img
               src="@/./assets/img/klients/icon-3.png"
               height="100"
@@ -31,7 +31,7 @@
             />
           </div>
 
-          <div class="klients__slide">
+          <div class="clients__slide">
             <img
               src="@/./assets/img/klients/icon-4.png"
               height="100"
@@ -40,7 +40,7 @@
             />
           </div>
 
-          <div class="klients__slide">
+          <div class="clients__slide">
             <img
               src="@/./assets/img/klients/icon-1.png"
               height="100"
@@ -48,7 +48,7 @@
               alt=""
             />
           </div>
-          <div class="klients__slide">
+          <div class="clients__slide">
             <img
               src="@/./assets/img/klients/icon-2.png"
               height="100"
@@ -56,7 +56,7 @@
               alt=""
             />
           </div>
-          <div class="klients__slide">
+          <div class="clients__slide">
             <img
               src="@/./assets/img/klients/icon-3.png"
               height="100"
@@ -64,7 +64,7 @@
               alt=""
             />
           </div>
-          <div class="klients__slide">
+          <div class="clients__slide">
             <img
               src="@/./assets/img/klients/icon-4.png"
               height="100"
@@ -83,12 +83,12 @@
 <style scoped lang="scss">
 @import "@/./style/veraibles.scss";
 
-.klients__desc {
+.clients__desc {
   font-size: 40px;
   line-height: 49px;
   color: $colorMain;
 }
-.klients__title {
+.clients__title {
   font-size: 64px;
   line-height: 78px;
   color: #000000;
@@ -116,10 +116,10 @@ $animationSpeed: 40s;
 }
 
 // Styling
-.klients__slide {
+.clients__slide {
   margin-right: 200px;
 }
-.klients__box {
+.clients__box {
   background: white;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
@@ -149,27 +149,27 @@ $animationSpeed: 40s;
     top: 0;
   }
 
-  .klients__track {
+  .clients__track {
     animation: scroll $animationSpeed linear infinite;
     display: flex;
 
     width: calc(250px * 14);
   }
 
-  .klients__box {
+  .clients__box {
     height: 100px;
     width: 250px;
   }
 }
 @media screen and (max-width: 500px) {
-  .klients__desc {
+  .clients__desc {
     font-size: 24px;
   }
-  .klients__title {
+  .clients__title {
     font-size: 35px;
     line-height: 40px;
   }
-  .klients__slide {
+  .clients__slide {
     margin-right: 100px;
   }
   $animationSpeed: 10s;

@@ -15,7 +15,7 @@
             <a href="#"><li>Информация</li></a>
             <a href="#"><li>Контакты</li></a>
             <a href="#"><li>Тарифы</li></a>
-            <a href="#"><li>Клиенты</li></a>
+            <li><a href="#clients">Клиенты</a></li>
           </ul>
         </div>
       </nav>
@@ -28,7 +28,7 @@
         <nav class="header__nav">
           <ul class="header__list-nav">
             <li class="header__list-item">
-              <a class="header__nav-link" href="#">Главная</a>
+              <a class="header__nav-link" id="header" href="#">Главная</a>
             </li>
             <li class="header__list-item">
               <a class="header__nav-link" href="#">Информация</a>
@@ -37,10 +37,10 @@
               <a class="header__nav-link" href="#">Контакты</a>
             </li>
             <li class="header__list-item">
-              <a class="header__nav-link" href="#">Тарифы</a>
+              <a class="header__nav-link" href="#tariff">Тарифы</a>
             </li>
             <li class="header__list-item">
-              <a class="header__nav-link" href="#">Клиенты</a>
+              <a class="header__nav-link" href="#clients">Клиенты</a>
             </li>
             <li>
               <app-button>Авторизоваться</app-button>

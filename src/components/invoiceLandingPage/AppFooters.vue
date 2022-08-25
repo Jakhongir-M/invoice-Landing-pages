@@ -8,7 +8,7 @@
         <nav class="footer__nav">
           <ul class="footer__list-nav">
             <li class="footer__list-item">
-              <a class="footer__nav-link" href="#">На главную</a>
+              <a class="footer__nav-link" href="#header">На главную</a>
             </li>
             <li class="footer__list-item">
               <a class="footer__nav-link" href="#">О сервисе</a>

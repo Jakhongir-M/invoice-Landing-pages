@@ -12,7 +12,11 @@
           </div>
         </div>
         <div class="hero__right">
-          <img src="@/./assets/img/hero-Landing/photo-hero.png" alt="" />
+          <img
+            class="hero__right-img"
+            src="@/./assets/img/hero-Landing/photo-hero.jpg"
+            alt=""
+          />
         </div>
       </div>
     </div>
@@ -80,6 +84,10 @@ export default {
     width: 600px;
     height: 550px;
     border-radius: 55px;
+  }
+  .hero__right-img {
+    width: 100%;
+    height: 100%;
   }
   @media screen and (max-width: 1600px) {
     .hero {
