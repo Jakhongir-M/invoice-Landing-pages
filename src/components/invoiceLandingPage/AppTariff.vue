@@ -4,55 +4,70 @@
       <a class="tariff__link"> Тарифные планы</a>
       <h2 class="tariff__title">Какие у нас тарифные планы?</h2>
       <p class="tariff__desc">Цена на отправку одного документа</p>
-      <input type="radio" name="testimonial" id="t-1" />
-      <input type="radio" name="testimonial" id="t-2" checked />
-      <input type="radio" name="testimonial" id="t-3" />
-
-      <div class="tariff__testimonials">
-        <label class="tariff__item" for="t-1">
-          <h3 class="tariff__testimonials-title">Бизнес 500</h3>
-          <p class="tariff__testimonials-money">345 сум</p>
-          <p class="tariff__desc">
-            Тариф для пользователей отправляющих до 500 (пятисот) документов в
-            месяц
-          </p>
-          <second-button class="tariff__btn">Оформить</second-button>
-        </label>
-        <label class="tariff__item" for="t-2">
-          <h3 class="tariff__testimonials-title">Старт</h3>
-          <p class="tariff__testimonials-money">506 сум</p>
-          <p class="tariff__desc">
-            Тариф для пользователей отправляющих до 500 (пятисот) документов в
-            месяц
-          </p>
-          <second-button class="tariff__btn">Оформить</second-button>
-        </label>
-        <label class="tariff__item" for="t-3">
-          <h3 class="tariff__testimonials-title">Бизнес 1000</h3>
-          <p class="tariff__testimonials-money">276 сум</p>
-          <p class="tariff__desc">
-            Тариф для пользователей отправляющих до 500 (пятисот) документов в
-            месяц
-          </p>
-          <second-button class="tariff__btn">Оформить</second-button>
-        </label>
-      </div>
-      <div class="dots">
-        <label for="t-1"></label>
-        <label for="t-2"></label>
-        <label for="t-3"></label>
+      <div class="tariff__card-box">
+        <input type="radio" name="testimonial" id="t-1" />
+        <input type="radio" name="testimonial" id="t-2" checked />
+        <input type="radio" name="testimonial" id="t-3" />
+        <div class="tariff__testimonials">
+          <label class="tariff__item" for="t-1">
+            <h3 class="tariff__testimonials-title">Бизнес 500</h3>
+            <p class="tariff__testimonials-money">345 сум</p>
+            <p class="tariff__desc">
+              Тариф для пользователей отправляющих до 500 (пятисот) документов в
+              месяц
+            </p>
+            <second-button class="tariff__btn">Оформить</second-button>
+          </label>
+          <label class="tariff__item" for="t-2">
+            <h3 class="tariff__testimonials-title">Старт</h3>
+            <p class="tariff__testimonials-money">506 сум</p>
+            <p class="tariff__desc">
+              Тариф для пользователей отправляющих до 500 (пятисот) документов в
+              месяц
+            </p>
+            <second-button class="tariff__btn">Оформить</second-button>
+          </label>
+          <label class="tariff__item" for="t-3">
+            <h3 class="tariff__testimonials-title">Бизнес 1000</h3>
+            <p class="tariff__testimonials-money">276 сум</p>
+            <p class="tariff__desc">
+              Тариф для пользователей отправляющих до 500 (пятисот) документов в
+              месяц
+            </p>
+            <second-button class="tariff__btn">Оформить</second-button>
+          </label>
+        </div>
+        <div class="dots">
+          <label for="t-1"></label>
+          <label for="t-2"></label>
+          <label for="t-3"></label>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import gsap from "gsap";
 import SecondButton from "@/./components/invoiceLandingPage/UiElements/OneButton.vue";
 export default {
+  mounted() {
+    gsap.from(".tariff__link, .tariff__title, .tariff__desc", {
+      scale: 0.1,
+      opacity: 0,
+      stagger: 0.2,
+      rotation: 0,
+      y: 200,
+      duration: 0.6,
+      scrollTrigger: {
+        trigger:
+          ".tariff__link, .tariff__title ,.tariff__desc, .tariff__card-box,     .tariff__testimonials-title",
+        toggleActions: "play none none none",
+      },
+    });
+  },
   data() {
-    return {
-      // ButtonName: "Оформить",
-    };
+    return {};
   },
   components: {
     SecondButton,

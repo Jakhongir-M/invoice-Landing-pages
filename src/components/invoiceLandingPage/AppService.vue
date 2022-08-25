@@ -3,7 +3,7 @@
     <div class="_container">
       <div class="service__wrapper">
         <div class="service__box-desc">
-          <a class="service__link" href="#">Инструкция</a>
+          <p class="service__link" href="#">Инструкция</p>
           <h1 class="service__title">Как пользоваться сервисом?</h1>
           <p class="service__desc">
             Инструкция по отправке документов в налоговую через сервис E-invoice
@@ -68,13 +68,14 @@
               </div>
             </li>
             <li
+              id="fron-4"
               class="service__item"
               ontouchstart="this.classList.toggle('hover');"
             >
               <div class="container">
                 <div class="front service-front-4">
                   <div class="inner">
-                    <p class="service__number">5</p>
+                    <p class="service__number">4</p>
                     <span class="service__text">Ваш документ готов</span>
                   </div>
                 </div>
@@ -89,13 +90,14 @@
               </div>
             </li>
             <li
+              id="fron-5"
               class="service__item"
               ontouchstart="this.classList.toggle('hover');"
             >
               <div class="container">
                 <div class="front service-front-5">
                   <div class="inner">
-                    <p class="service__number">4</p>
+                    <p class="service__number">5</p>
                     <span class="service__text">Сохраните ваш документ</span>
                   </div>
                 </div>
@@ -114,7 +116,35 @@
 </template>
 
 <script>
-export default {};
+import gsap from "gsap";
+export default {
+  mounted() {
+    gsap.from(".service__title, .service__link, .service__desc", {
+      scale: 0.1,
+      opacity: 0,
+      stagger: 0.2,
+      rotation: 0,
+      y: 200,
+      duration: 0.6,
+      scrollTrigger: {
+        trigger: "advantages__left, .service__link ,.service__desc",
+        toggleActions: "play none none none",
+      },
+    });
+    gsap.from(".service__item", {
+      scale: 0.1,
+      opacity: 0,
+      stagger: 0.2,
+      rotation: 0,
+      y: 200,
+      duration: 0.6,
+      scrollTrigger: {
+        trigger: ".service__item",
+        toggleActions: "play none none none",
+      },
+    });
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -125,6 +155,14 @@ export default {};
 }
 
 @import "@/./style/veraibles.scss";
+#fron-5 {
+  order: 4;
+  margin-top: 80px;
+}
+#fron-4 {
+  order: 5;
+  margin-bottom: 150px;
+}
 .service__front-1 {
   background-image: url("@/./assets/img/service-Landing/document-1.jpg");
 }
@@ -349,6 +387,14 @@ export default {};
 }
 
 @media screen and (max-width: 1480px) {
+  #fron-5 {
+    order: 0;
+    margin-top: 0px;
+  }
+  #fron-4 {
+    order: 0;
+    margin-bottom: 0px;
+  }
   .service__item {
     width: calc(33.333333% - 2rem);
   }

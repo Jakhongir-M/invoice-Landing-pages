@@ -42,8 +42,8 @@
             <li class="header__list-item">
               <a class="header__nav-link" href="#clients">Клиенты</a>
             </li>
-            <li>
-              <app-button>Авторизоваться</app-button>
+            <li class="header__list-item">
+              <app-button class="header__btn">Авторизоваться</app-button>
             </li>
           </ul>
         </nav>
@@ -53,8 +53,29 @@
 </template>
 
 <script>
+import gsap from "gsap";
 import AppButton from "@/components/invoiceLandingPage/UiElements/OneButton.vue";
+
 export default {
+  mounted() {
+    gsap.from(".header__logo ", {
+      scale: 0.5,
+      opacity: 0,
+      rotation: 0,
+      x: 0,
+      y: 200,
+      duration: 0.5,
+    });
+    gsap.from(".header__list-item", {
+      scale: 0.5,
+      opacity: 0,
+      stagger: 0.1,
+      rotation: 0,
+      x: 0,
+      y: 150,
+      duration: 1,
+    });
+  },
   data() {
     return {
       buttontext: "Авторизоваться",

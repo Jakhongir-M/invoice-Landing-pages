@@ -14,7 +14,7 @@
         <div class="hero__right">
           <img
             class="hero__right-img"
-            src="@/./assets/img/hero-Landing/photo-hero.jpg"
+            src="@/./assets/img/hero-Landing/photo-hero.png"
             alt=""
           />
         </div>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import gsap from "gsap";
 import AppButton from "@/./components/invoiceLandingPage/UiElements/SecondButton.vue";
 export default {
   data() {
@@ -33,6 +34,23 @@ export default {
   },
   components: {
     AppButton,
+  },
+  mounted() {
+    gsap.from(".hero__left-title ,.hero__left-box ", {
+      scale: 0.5,
+      opacity: 0,
+      stagger: 0.5,
+      rotation: 0,
+      y: 200,
+      duration: 1,
+    });
+    gsap.to(".hero__right", {
+      y: 10,
+      yPercent: -10,
+      duration: 2.5,
+      repeat: Infinity,
+      yoyo: true,
+    });
   },
 };
 </script>

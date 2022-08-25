@@ -57,7 +57,27 @@
 </template>
 
 <script>
-export default {};
+import gsap from "gsap";
+export default {
+  mounted() {
+    gsap.from(
+      ".footer__logo, .footer__nav-link, .footer__contact-img, .footer__contact-title",
+      {
+        scale: 0.5,
+        opacity: 0,
+        stagger: 0.2,
+        rotation: 0,
+        y: 200,
+        duration: 0.7,
+        scrollTrigger: {
+          trigger:
+            ".footer__logo, .footer__nav-link, .clients__title, .footer__contact-img, .footer__contact-title",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  },
+};
 </script>
 
 <style scoped lang="scss">

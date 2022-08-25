@@ -1,5 +1,5 @@
 <template>
-  <div class="Clients" id="clients">
+  <div class="clients" id="clients">
     <div class="container">
       <p class="clients__desc">Клиенты</p>
       <h3 class="clients__title">Наши Основные клиенты</h3>
@@ -78,8 +78,25 @@
   </div>
 </template>
 
-<script></script>
-
+<script>
+import gsap from "gsap";
+export default {
+  mounted() {
+    gsap.from(".clients__desc, .clients__title, .clients__box", {
+      scale: 0.1,
+      opacity: 0,
+      stagger: 0.2,
+      rotation: 0,
+      y: 200,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".clients__box, .clients__desc, .clients__title",
+        toggleActions: "play none none none",
+      },
+    });
+  },
+};
+</script>
 <style scoped lang="scss">
 @import "@/./style/veraibles.scss";
 

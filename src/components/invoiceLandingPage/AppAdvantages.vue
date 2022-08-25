@@ -3,7 +3,7 @@
     <div class="container">
       <div class="advantages__box">
         <div class="advantages__left">
-          <a href="" class="advantages__link">О сервисе</a>
+          <a href="#" class="advantages__link">О сервисе</a>
           <h2 class="advantages__title">Основные преимущества сервиса</h2>
           <p class="advantages__desc">
             Справа перечисленны основные преимущества сервиса E-invoice
@@ -63,7 +63,41 @@
 </template>
 
 <script>
-export default {};
+import gsap from "gsap";
+export default {
+  mounted() {
+    gsap.from(
+      ".advantages__left, .advantages__link, .advantages__title, .advantages__desc",
+      {
+        scale: 0.2,
+        opacity: 0,
+        stagger: 0.2,
+        rotation: 0,
+        y: 100,
+        duration: 0.5,
+        scrollTrigger: {
+          start: "0 100%",
+          trigger:
+            "advantages__left, .advantages__link, .advantages__title, .advantages__desc",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+    gsap.from(".list__item", {
+      scale: 0.5,
+      opacity: 0,
+      stagger: 0.2,
+      rotation: 0,
+      y: 200,
+      duration: 0.5,
+      scrollTrigger: {
+        start: "0px 100%",
+        trigger: ".list__item",
+        toggleActions: "play none none none",
+      },
+    });
+  },
+};
 </script>
 
 <style scoped lang="scss">
